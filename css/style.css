@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background-color: #301d7b;
+    color: #ffffff;
+}
+.sign-in_btn {
+    background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+    box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+    border-radius: 5px;
+    color: #ffffff;
+    transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.sign-in_btn:hover {
+    transform: scale(1.01) translateY(-2px);
+    box-shadow: 0 10px 20px 0#054eed6b;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    background-color: black;
+    opacity: 0.2;
+}
+.carousel-indicators {
+     position: absolute;
+     bottom: 20px;
+     left: 50%; 
+    z-index: 15; 
+}
+.carousel-indicators .active {
+    background-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.carousel-indicators li {
+    background-color: #ccc;
+    border: 1px solid #888;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}

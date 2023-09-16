@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkNet</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mb-5">
+        <div class="mb-4">
+          <h2>WorkNet</h2>
+        </div>
+        <img src="images/social-media-1.png" alt="Social networking" class="img-fluid">
+      </div>
+
+      <div class="col-md-6 mb-5">
+        <h2 class="text-center">Registration</h2>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="username"><i class="fas fa-user"></i> Username:</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your name" aria-required="true" required>
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" aria-required="true" required>
+          </div>
+          <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i> Password:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="********" aria-required="true" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword"><i class="fas fa-lock"></i> Confirm Password:</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" aria-required="true" required>
+          </div>
+          <button type="submit" class="btn btn-light col-2-sm"> log In</button>
+          <button type="submit" class="btn btn-primary col-2-sm"> Register</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row mt-5 justify-content-center">
+
+    <div class="col-md-10">
+      <h2 class="text-center">Our Images</h2>
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/slide-1.jpg" class="d-block mx-auto" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/slide-2.jpg" class="d-block mx-auto" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/slide-3.jpg" class="d-block mx-auto" alt="Slide 3">
+          </div>
+
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <h1>Abilities</h1>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Task 1: Complete the project</td>
+          <td><i class="fas fa-check text-success"></i></td>
+        </tr>
+        <tr>
+          <td>Task 2: Prepare the presentation</td>
+          <td><i class="fas fa-times text-danger"></i></td>
+        </tr>
+        <tr>
+          <td>Task 3: Submit the report</td>
+          <td><i class="fas fa-check text-success"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer class="text-center py-2">
+    <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        alert('Паролі не співпадають');
+        event.preventDefault(); 
+      }
+    });
+  </script>
+</body>
+
+</html>
